@@ -1,10 +1,10 @@
 # Scalable System Architectures
 
-A collection of system design projects demonstrating scalable architecture patterns and implementations.
+**Note**: These are **personal examples** I work on in my spare time to demonstrate scalable architecture patterns and design thinking. They are **conceptual and illustrative** - not production-ready code.
 
 ## Overview
 
-This repository showcases practical approaches to building high-scale systems through hands-on projects. Each project focuses on specific scalability challenges and architectural patterns.
+This repository showcases my understanding of building high-scale systems through hands-on learning projects. Each project focuses on specific scalability challenges and architectural patterns, designed to demonstrate knowledge of distributed systems concepts and trade-offs.
 
 ## System Design Projects
 
@@ -28,7 +28,7 @@ This repository showcases practical approaches to building high-scale systems th
 
 ## Tech Stack
 
-- **Cloud**: AWS, Aazure, GCP
+- **Cloud**: AWS, Azure, GCP
 - **Containers**: Docker, Kubernetes  
 - **Databases**: PostgreSQL, MongoDB, Redis, Elasticsearch
 - **Message Queues**: Apache Kafka, RabbitMQ
@@ -58,16 +58,12 @@ This repository showcases practical approaches to building high-scale systems th
 
 Each project includes:
 - Architecture diagrams and design decisions
-- Implementation code (where applicable)
-- Deployment configurations
-- Performance benchmarks
-- Lessons learned
+- Conceptual implementation approaches (educational purposes)
+- System design considerations and trade-offs
+- Performance and scalability analysis
+- Key learnings and insights
 
 ## Author
 
 **Daniel G. de la Morena**  
-[LinkedIn](https://www.linkedin.com/in/daniel-gonzalez-de-la-morena/)
-
----
-
-*Building scalable systems, one architecture at a time*
+**[LinkedIn](https://www.linkedin.com/in/daniel-gonzalez-de-la-morena/)**
