@@ -8,6 +8,12 @@ This repository showcases my understanding of building high-scale systems throug
 
 ## System Design Projects
 
+### [Cloud File Storage System](./cloud-file-storage/README.md)
+**Challenge**: Handle large file uploads, cross-device sync, and secure sharing  
+**Technologies**: S3, DynamoDB, CDN, signed URLs, chunked uploads  
+**Focus**: Large file handling, deduplication, multi-device synchronization  
+**Scale**: 50GB+ files, global file distribution
+
 ### [Ticket Booking System](./ticket-booking-system/README.md)
 **Challenge**: Handle high-concurrency ticket reservations and prevent double booking  
 **Technologies**: PostgreSQL, Redis, Kafka, WebSockets, Elasticsearch  
@@ -19,12 +25,6 @@ This repository showcases my understanding of building high-scale systems throug
 **Technologies**: DynamoDB, Cassandra, Redis, Kafka, WebSockets  
 **Focus**: Fan-out optimization, timeline management, hot user handling  
 **Scale**: 2B+ users, millions of followers per celebrity
-
-### [Cloud File Storage System](./cloud-file-storage/README.md)
-**Challenge**: Handle large file uploads, cross-device sync, and secure sharing  
-**Technologies**: S3, DynamoDB, CDN, signed URLs, chunked uploads  
-**Focus**: Large file handling, deduplication, multi-device synchronization  
-**Scale**: 50GB+ files, global file distribution
 
 ## Tech Stack
 

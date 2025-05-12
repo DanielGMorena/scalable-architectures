@@ -336,44 +336,6 @@ def process_queue(self, event_id, batch_size=100):
 - Admin control for enabling/disabling queues
 - Fair access with estimated wait times
 
-## Complete System Design
-
-```
-┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-│   Web Client    │    │  Mobile App     │    │  Admin Panel    │
-└─────────┬───────┘    └─────────┬───────┘    └─────────┬───────┘
-          │                      │                      │
-          └──────────────────────┼──────────────────────┘
-                                 │
-                    ┌─────────────┴─────────────┐
-                    │      API Gateway          │
-                    │    (Authentication,       │
-                    │     Rate Limiting,        │
-                    │     Load Balancing)       │
-                    └─────────────┬─────────────┘
-                                  │
-          ┌───────────────────────┼───────────────────────┐
-          │                       │                       │
-    ┌─────▼─────┐         ┌───────▼───────┐       ┌──────▼──────┐
-    │Event Svc  │         │ Ticket Svc    │       │Booking Svc  │
-    │(View/Search│        │(Reservations) │       │(Payments)   │
-    └─────┬─────┘         └───────┬───────┘       └──────┬──────┘
-          │                       │                       │
-          └───────────────────────┼───────────────────────┘
-                                  │
-                    ┌─────────────┴─────────────┐
-                    │    Event Bus (Kafka)     │
-                    └─────────────┬─────────────┘
-                                  │
-          ┌───────────────────────┼───────────────────────┐
-          │                       │                       │
-    ┌─────▼─────┐         ┌───────▼───────┐       ┌──────▼──────┐
-    │PostgreSQL │         │ Elasticsearch │       │Redis Cache  │
-    │(Events,   │         │ (Search)      │       │(Sessions,   │
-    │ Tickets)  │         │               │       │ Locks)      │
-    └───────────┘         └───────────────┘       └─────────────┘
-```
-
 ### Component Responsibilities
 
 **API Gateway:**

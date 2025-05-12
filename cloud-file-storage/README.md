@@ -25,6 +25,10 @@ A cloud-based file storage service that allows users to store, sync, and share f
 3. **FileMetadata**: Metadata associated with files (name, size, type, owner, etc.)
 4. **Share**: Sharing relationships between users and files
 
+## System Architecture
+
+![Cloud File Storage System Architecture](./assets/schema.png)
+
 ## Service Interfaces
 
 ### Upload File
@@ -510,44 +514,6 @@ class BackupAndRecoveryService:
 - Cross-region replication for disaster recovery
 - Version history for file recovery
 - Automated backup verification
-
-## Complete System Design
-
-```
-┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-│   Web Client    │    │  Mobile App     │    │  Desktop App    │
-└─────────┬───────┘    └─────────┬───────┘    └─────────┬───────┘
-          │                      │                      │
-          └──────────────────────┼──────────────────────┘
-                                 │
-                    ┌─────────────┴─────────────┐
-                    │      API Gateway          │
-                    │    (Authentication,       │
-                    │     Rate Limiting,        │
-                    │     Load Balancing)       │
-                    └─────────────┬─────────────┘
-                                  │
-          ┌───────────────────────┼───────────────────────┐
-          │                       │                       │
-    ┌─────▼─────┐         ┌───────▼───────┐       ┌──────▼──────┐
-    │File Svc   │         │ Share Svc     │       │Sync Svc     │
-    │(Upload/   │         │(Permissions)  │       │(Version     │
-    │ Download) │         │               │       │ Control)    │
-    └─────┬─────┘         └───────┬───────┘       └──────┬──────┘
-          │                       │                       │
-          └───────────────────────┼───────────────────────┘
-                                  │
-                    ┌─────────────┴─────────────┐
-                    │    Message Queue (Kafka) │
-                    └─────────────┬─────────────┘
-                                  │
-          ┌───────────────────────┼───────────────────────┐
-          │                       │                       │
-    ┌─────▼─────┐         ┌───────▼───────┐       ┌──────▼──────┐
-    │Blob Storage│        │DynamoDB       │       │CDN          │
-    │(S3)        │        │(Metadata)     │       │(Cache)      │
-    └───────────┘         └───────────────┘       └─────────────┘
-```
 
 ### Component Responsibilities
 

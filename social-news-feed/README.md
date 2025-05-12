@@ -363,43 +363,6 @@ class RealTimeFeedService:
 - Selective broadcasting to online users
 - Efficient message routing
 
-## Complete System Design
-
-```
-┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-│   Web Client    │    │  Mobile App     │    │  Admin Panel    │
-└─────────┬───────┘    └─────────┬───────┘    └─────────┬───────┘
-          │                      │                      │
-          └──────────────────────┼──────────────────────┘
-                                 │
-                    ┌─────────────┴─────────────┐
-                    │      API Gateway          │
-                    │    (Authentication,       │
-                    │     Rate Limiting,        │
-                    │     Load Balancing)       │
-                    └─────────────┬─────────────┘
-                                  │
-          ┌───────────────────────┼───────────────────────┐
-          │                       │                       │
-    ┌─────▼─────┐         ┌───────▼───────┐       ┌──────▼──────┐
-    │Post Svc   │         │ Follow Svc    │       │Feed Svc     │
-    │(Create)   │         │(Relationships)│       │(Timeline)   │
-    └─────┬─────┘         └───────┬───────┘       └──────┬──────┘
-          │                       │                       │
-          └───────────────────────┼───────────────────────┘
-                                  │
-                    ┌─────────────┴─────────────┐
-                    │    Message Queue (Kafka) │
-                    └─────────────┬─────────────┘
-                                  │
-          ┌───────────────────────┼───────────────────────┐
-          │                       │                       │
-    ┌─────▼─────┐         ┌───────▼───────┐       ┌──────▼──────┐
-    │DynamoDB   │         │ Cassandra     │       │Redis Cache  │
-    │(Posts)    │         │(Timelines)    │       │(Feeds)      │
-    └───────────┘         └───────────────┘       └─────────────┘
-```
-
 ### Component Responsibilities
 
 **API Gateway:**
