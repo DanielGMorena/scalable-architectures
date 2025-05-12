@@ -32,14 +32,23 @@ This repository showcases my understanding of building high-scale systems throug
 
 ![Social News Feed Architecture](./social-news-feed/assets/scheme.png)
 
+### [Enterprise Financial Integration System](./enterprise-financial-integration/README.md)
+**Challenge**: Real-time data synchronization between SAP ERP and SQL Server with consistency guarantees  
+**Technologies**: FastAPI, Kafka, SQL Server, SAP RFC, Redis, Kubernetes, Azure/AWS, Prometheus, Grafana  
+**Focus**: SAGA pattern for billing consistency, async task processing, JWT auth, automated backups  
+**Scale**: Multi-database consistency, high-concurrency reporting, per-project caching, 7-year retention
+
+![Enterprise Financial Integration Architecture](./enterprise-financial-integration/assets/schema.png)
+
 ## Tech Stack
 
 - **Cloud**: AWS, Azure, GCP
 - **Containers**: Docker, Kubernetes  
-- **Databases**: PostgreSQL, MongoDB, Redis, Elasticsearch
+- **Databases**: PostgreSQL, SQL Server, MongoDB, Redis, Elasticsearch
+- **APIs**: FastAPI, REST, WebSockets
 - **Message Queues**: Apache Kafka, RabbitMQ
 - **Monitoring**: Prometheus, Grafana, Jaeger
-- **Infrastructure**: Terraform, Helm
+- **Infrastructure**: Terraform, Helm, GitHub Actions
 
 ## Project Structure
 
@@ -49,6 +58,8 @@ This repository showcases my understanding of building high-scale systems throug
 ├── social-news-feed/           # Social media feed with fan-out challenges
 │   └── README.md               # Complete system design and architecture  
 ├── cloud-file-storage/         # File storage with sync and sharing
+│   └── README.md               # Complete system design and architecture
+├── enterprise-financial-integration/  # SAP-SQL Server data synchronization
 │   └── README.md               # Complete system design and architecture
 └── README.md                   # This overview document
 ```
