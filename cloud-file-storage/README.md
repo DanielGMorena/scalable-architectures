@@ -18,16 +18,16 @@ A cloud-based file storage service that allows users to store, sync, and share f
 3. The system should be secure and reliable with file recovery capabilities
 4. Upload, download, and sync operations should be fast (low latency)
 
+## System Architecture
+
+![Cloud File Storage System Architecture](./assets/schema.png)
+
 ## Data Models
 
 1. **User**: Represents users in the system
 2. **File**: Raw file data stored in blob storage
 3. **FileMetadata**: Metadata associated with files (name, size, type, owner, etc.)
 4. **Share**: Sharing relationships between users and files
-
-## System Architecture
-
-![Cloud File Storage System Architecture](./assets/schema.png)
 
 ## Service Interfaces
 

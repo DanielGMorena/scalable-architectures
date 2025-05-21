@@ -17,6 +17,10 @@ A ticket booking platform that allows users to purchase tickets for concerts, sp
 3. The system should have low latency search (< 500ms)
 4. The system is read heavy, and thus needs to be able to support high read throughput (100:1)
 
+## System Architecture
+
+![Ticket Booking System Architecture](./assets/scheme.png)
+
 ## Data Models
 
 1. **Event**: Stores essential information about an event, including details like the date, description, type, and the performer or team involved
@@ -46,8 +50,6 @@ POST /bookings/:eventId -> bookingId
   "paymentDetails": ...
 }
 ```
-
-## System Architecture
 
 ### 1) Users should be able to view events
 

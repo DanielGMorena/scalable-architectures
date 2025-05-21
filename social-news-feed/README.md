@@ -18,6 +18,10 @@ A social network news feed that displays recent posts from users in your social 
 3. The system should handle 2 billion users
 4. Users should be able to follow unlimited users and have unlimited followers
 
+## System Architecture
+
+![Ticket Booking System Architecture](./assets/scheme.png)
+
 ## Data Models
 
 1. **User**: Represents users in the system
