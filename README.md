@@ -14,17 +14,23 @@ This repository showcases my understanding of building high-scale systems throug
 **Focus**: Large file handling, deduplication, multi-device synchronization  
 **Scale**: 50GB+ files, global file distribution
 
+![Cloud File Storage Architecture](./cloud-file-storage/assets/schema.png)
+
 ### [Ticket Booking System](./ticket-booking-system/README.md)
 **Challenge**: Handle high-concurrency ticket reservations and prevent double booking  
 **Technologies**: PostgreSQL, Redis, Kafka, WebSockets, Elasticsearch  
 **Focus**: Optimistic concurrency control, real-time seatmap updates, virtual waiting rooms  
 **Scale**: 10M+ concurrent users for popular events
 
+![Ticket Booking System Architecture](./ticket-booking-system/assets/scheme.png)
+
 ### [Social News Feed System](./social-news-feed/README.md)
 **Challenge**: Efficiently distribute posts to millions of followers with real-time updates  
 **Technologies**: DynamoDB, Cassandra, Redis, Kafka, WebSockets  
 **Focus**: Fan-out optimization, timeline management, hot user handling  
 **Scale**: 2B+ users, millions of followers per celebrity
+
+![Social News Feed Architecture](./social-news-feed/assets/scheme.png)
 
 ## Tech Stack
 
