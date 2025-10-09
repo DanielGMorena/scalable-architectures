@@ -12,7 +12,8 @@ This repository showcases my understanding of building high-scale systems throug
 **Challenge**: Handle large file uploads, cross-device sync, and secure sharing  
 **Technologies**: S3, DynamoDB, CDN, signed URLs, chunked uploads  
 **Focus**: Large file handling, deduplication, multi-device synchronization  
-**Scale**: 50GB+ files, global file distribution
+**Scale**: 50GB+ files, global file distribution  
+**Infrastructure**: [Terraform IaC](./cloud-file-storage/terraform/) - Azure deployment with AKS, Cosmos DB, Storage, Key Vault
 
 ![Cloud File Storage Architecture](./cloud-file-storage/assets/schema.png)
 

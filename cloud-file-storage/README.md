@@ -22,6 +22,18 @@ A cloud-based file storage service that allows users to store, sync, and share f
 
 ![Cloud File Storage System Architecture](./assets/schema.png)
 
+### Infrastructure as Code
+
+The system can be deployed to Azure using Terraform. See the [terraform/](./terraform/) directory for the complete infrastructure setup including:
+- **AKS Cluster**: Kubernetes for container orchestration
+- **Cosmos DB**: NoSQL database for metadata storage
+- **Azure Storage**: Blob storage for file data
+- **Azure Key Vault**: Secrets management
+- **API Management**: API gateway and routing
+- **Front Door CDN**: Global content delivery
+
+📁 **[View Terraform Configuration →](./terraform/README.md)**
+
 ## Data Models
 
 1. **User**: Represents users in the system
