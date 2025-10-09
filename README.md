@@ -40,12 +40,21 @@ This repository showcases my understanding of building high-scale systems throug
 
 ![Enterprise Financial Integration Architecture](./enterprise-financial-integration/assets/schema.png)
 
+### [AI-Powered Document Search System](./ai-document-search/README.md)
+**Challenge**: Semantic search across millions of SAP documents with AI-generated embeddings and summaries  
+**Technologies**: Django, FastAPI, PostgreSQL (pgvector), MongoDB, FAISS, Elasticsearch, OpenAI API, TensorFlow, Kafka, AWS  
+**Focus**: Hybrid search (semantic + keyword), multi-region deployment, embedding generation at scale  
+**Scale**: Millions of documents, <500ms search latency, geographic distribution (EU + Chile)
+
+![AI Document Search Architecture](./ai-document-search/assets/schema.png)
+
 ## Tech Stack
 
 - **Cloud**: AWS, Azure, GCP
 - **Containers**: Docker, Kubernetes  
-- **Databases**: PostgreSQL, SQL Server, MongoDB, Redis, Elasticsearch
-- **APIs**: FastAPI, REST, WebSockets
+- **Databases**: PostgreSQL (+ pgvector), SQL Server, MongoDB, Redis, Elasticsearch
+- **APIs**: FastAPI, Django REST, WebSockets
+- **AI/ML**: OpenAI API, TensorFlow, FAISS, Sentence Transformers
 - **Message Queues**: Apache Kafka, RabbitMQ
 - **Monitoring**: Prometheus, Grafana, Jaeger
 - **Infrastructure**: Terraform, Helm, GitHub Actions
@@ -60,6 +69,8 @@ This repository showcases my understanding of building high-scale systems throug
 ├── cloud-file-storage/         # File storage with sync and sharing
 │   └── README.md               # Complete system design and architecture
 ├── enterprise-financial-integration/  # SAP-SQL Server data synchronization
+│   └── README.md               # Complete system design and architecture
+├── ai-document-search/         # AI-powered semantic search with SAP integration
 │   └── README.md               # Complete system design and architecture
 └── README.md                   # This overview document
 ```

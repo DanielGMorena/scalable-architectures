@@ -28,8 +28,6 @@ A real-time financial data integration platform that synchronizes data between S
 
 ![Enterprise Financial Integration Architecture](./assets/schema.png)
 
-**Note**: A detailed ASCII architecture sketch is available in [`./assets/architecture-sketch.txt`](./assets/architecture-sketch.txt) for reference.
-
 ### High-Level Component Overview
 
 | Layer | Description | Technologies |
